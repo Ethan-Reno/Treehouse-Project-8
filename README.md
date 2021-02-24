@@ -1,6 +1,7 @@
 # Treehouse-Project-8
  
 How to use:
+
 From inside the app's root directory, use:
   - npm install
   - npm start

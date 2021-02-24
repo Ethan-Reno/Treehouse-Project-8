@@ -14,7 +14,7 @@ const app = express();
   await sequelize.sync();
   try {
     await sequelize.authenticate();
-    console.log('Connection to databse established.');
+    console.log('Connection to database successful.');
   } catch (error) {
     console.error('Connection to database failed: ', error);
   }

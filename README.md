@@ -1,5 +1,7 @@
 # Treehouse-Project-8
  
+An SQL Library manager that allows you create, view, update and delete database entries for books.
+
 How to use:
 
 From inside the app's root directory, use:

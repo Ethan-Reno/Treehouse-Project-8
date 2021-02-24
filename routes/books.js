@@ -12,6 +12,14 @@ function asyncHandler(cb) {
   }
 }
 
+//500 error test for step 7
+router.get('/error', (req, res, next) => {
+  const error = new Error();
+  error.status = 500;
+  error.message = 'Test error';
+  throw error;
+});
+
 /* GET home page. */
 router.get('/', asyncHandler(async (req, res) => {
   const books = await Book.findAll();

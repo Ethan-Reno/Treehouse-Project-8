@@ -1,22 +1,24 @@
 body {
   padding: 10px 50px 50px;
-  font: 18px "Garamond", serif;
+  font: 16px "Roboto", sans-serif;
+  color: #CCCCCC;
+  background-color: #373F51;
 }
 
 a {
-  color: #019875;
+  color: #CAD6E2;
   text-decoration: none;
   font-weight: bold;
 }
 
   a:hover {
-    color: black;
+    color: #019875;
   }
 
 a.button, input[type=submit] {
   color: white;
   background: #019875;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   padding: 10px 14px 12px;
   font-size: 14px;
   border-radius: 2px;
@@ -62,7 +64,7 @@ tr {
 }
 
 tr:nth-child(2n) {
-  background: #E7E7E7;
+  background: #5B6886;
 }
 
 td {

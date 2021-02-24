@@ -1,10 +1,9 @@
 # Treehouse-Project-8
  
 How to use:
-With node.js installed, use:
+From inside the app's root directory, use:
   - npm install
   - npm start
-from inside the app's root directory.
 
 npm packages used:
 - express: 4.16.4

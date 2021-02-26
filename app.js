@@ -1,9 +1,9 @@
+const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-
 const indexRouter = require('./routes/index');
-const booksRouter = require('./routes/books');
 const { sequelize } = require('./models');
+const errorHandler = require('./errorHandler');
 
 const app = express();
 
@@ -26,25 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/books', booksRouter);
-
-// catch 404 and forward to error handler
-app.use((req, res, next) => {
-  const err = Error('Page not found')
-  err.status = 404;
-  next(err)
-});
-
-// error handler
-app.use((err, req, res, next) => {
-  res.locals.message = err.message;
-  res.locals.error = err;
-  if (err.status === 404) {
-    res.status(404).render('page-not-found', { err });
-  } else {
-    err.message = err.message || 'Something went wrong'
-    res.status(err.status || 500).render('error', { err });
-  }
-});
+app.use(errorHandler.notFoundErrorHandler);
+app.use(errorHandler.globalErrorHandler);
 
 module.exports = app;

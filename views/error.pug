@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  h1 #{err.status} Error: #{message}
-  h2= "Oops! Something went wrong..."
+  h1 "Oops! Something went wrong..."
+  h2 Error: #{err.message} 
   pre #{err.stack}
   p
     a.button(href="/") Home

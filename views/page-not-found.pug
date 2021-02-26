@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1 #{err.status} Error: #{message}
-  h2= "It looks like this page doesn't exist."
-    p
-    a.button(href="/") Back
+  h1 "Oops! Something went wrong..."
+  h2 #{err.message} 
+  p
+    a.button(href="/") Home

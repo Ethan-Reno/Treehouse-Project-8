@@ -15,7 +15,3 @@ npm packages used:
 - sequelize: 6.5.0
 - sequelize-cli: 6.2.0
 - sqlite3: 5.0.2
-
-CSS changes:
-- removed transition effects
-- changed background, text and hover colors
